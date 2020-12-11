@@ -2,6 +2,13 @@ package com.odfsoft.fishes;
 
 import org.junit.jupiter.api.Test;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class ExcerciseTest {
@@ -62,13 +69,27 @@ class ExcerciseTest {
 
     @Test
     public void longString() {
-
         Excercise test = new Excercise();
+        InputStream inputStream = ExcerciseTest.class.getResourceAsStream("data.txt");
+        String input = readFromInputStream(inputStream);
+        System.out.println("input size =" + input.length());
 
-        int sol = test.solution("CAAADACD");
+        int sol = test.solution(input);
 
-        assertEquals(5, sol);
+        assertEquals(281460, sol);
     }
 
+    private static String readFromInputStream(InputStream inputStream) {
+        String input = null;
+        try (BufferedReader br = new BufferedReader(new InputStreamReader(inputStream))) {
+            String line;
+            if ((line = br.readLine()) != null) {
+                input = line;
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return input;
+    }
 
 }

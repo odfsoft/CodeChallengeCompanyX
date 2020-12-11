@@ -68,7 +68,6 @@ public class Excercise {
                 newSurvivors.add(survivors.get(i));
             }
         }
-        System.out.println(newSurvivors);
         return newSurvivors;
     }
 
