@@ -24,4 +24,25 @@ class ExcerciseTest {
         assertEquals(1, sol);
     }
 
+    @Test
+    public void test3() {
+        Excercise test = new Excercise();
+
+        int sol = test.solution("ACAADACD"); // ACAADAC -> AAADA
+
+        assertEquals(5, sol);
+    }
+
+    @Test
+    public void test4() {
+        Excercise test = new Excercise();
+
+        int sol = test.solution("CAAADACD"); // CAAADAC -> AAADA
+
+        assertEquals(5, sol);
+    }
+
+
+
+
 }
