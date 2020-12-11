@@ -9,7 +9,7 @@ public class Excercise {
     // ABAD = ABA = 3
     // ACCCCD = -> ACCCC -> A = 1
     // CAAADACD -> CAAADAC -> AAADA -> 5
-    // DDDDDACD -> AC -> A -> 1
+    // DDDDDACD -> DDDDDAC -> DDDDDA -> 6
     // CAAADACD -> CAAADAC -> AAADA -> 5
     // CCAAA -> AAA = 3
     public int solution(String S) {

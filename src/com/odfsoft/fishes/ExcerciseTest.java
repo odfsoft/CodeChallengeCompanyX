@@ -48,7 +48,7 @@ class ExcerciseTest {
 
         int sol = test.solution("DDDDDACD");
 
-        assertEquals(1, sol);
+        assertEquals(6, sol);
     }
 
     @Test
