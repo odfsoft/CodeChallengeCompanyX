@@ -28,21 +28,47 @@ class ExcerciseTest {
     public void test3() {
         Excercise test = new Excercise();
 
-        int sol = test.solution("ACAADACD"); // ACAADAC -> AAADA
+        int sol = test.solution("ACCCCD");
 
-        assertEquals(5, sol);
+        assertEquals(1, sol);
     }
 
     @Test
     public void test4() {
         Excercise test = new Excercise();
 
-        int sol = test.solution("CAAADACD"); // CAAADAC -> AAADA
+        int sol = test.solution("CAAADACD");
 
         assertEquals(5, sol);
     }
 
+    @Test
+    public void test5() {
+        Excercise test = new Excercise();
 
+        int sol = test.solution("DDDDDACD");
+
+        assertEquals(1, sol);
+    }
+
+    @Test
+    public void test6() {
+        Excercise test = new Excercise();
+
+        int sol = test.solution("CAAADACD");
+
+        assertEquals(5, sol);
+    }
+
+    @Test
+    public void longString() {
+
+        Excercise test = new Excercise();
+
+        int sol = test.solution("CAAADACD");
+
+        assertEquals(5, sol);
+    }
 
 
 }

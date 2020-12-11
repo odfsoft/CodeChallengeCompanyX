@@ -3,15 +3,15 @@ package com.odfsoft.fishes;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 public class Excercise {
 
-    // ABAD = 3 -> 0 eats 1, 2 eats 1 = 1
-    // ACCCCD = 1 -> ACCC -> A = 1
+    // ABAD = ABA = 3
+    // ACCCCD = -> ACCCC -> A = 1
     // CAAADACD -> CAAADAC -> AAADA -> 5
-    // DDDDDACD -> CAABBAC -> AABBA -> AAA = 3
-    // CCAAA -> AAA
+    // DDDDDACD -> AC -> A -> 1
+    // CAAADACD -> CAAADAC -> AAADA -> 5
+    // CCAAA -> AAA = 3
     public int solution(String S) {
         char[] fishes = S.toCharArray();
         char[] eatableFishes = new char[] {'D', 'C', 'B'};
@@ -50,7 +50,6 @@ public class Excercise {
                             next++;
                         }
                     } else {
-                        System.out.println("survivor=" + current + " value = " + survivors.get(current));
                         prev = current;
                         current = next;
                         next++;
