@@ -1,4 +1,4 @@
-package com.odfsoft.burgers;
+package com.odfsoft.companies.x.burgers;
 
 import org.junit.jupiter.api.Test;
 

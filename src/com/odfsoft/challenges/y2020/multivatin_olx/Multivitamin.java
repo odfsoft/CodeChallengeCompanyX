@@ -1,4 +1,4 @@
-package com.odfsoft.multivatin;
+package com.odfsoft.challenges.y2020.multivatin_olx;
 
 import java.util.*;
 

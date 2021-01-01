@@ -1,4 +1,4 @@
-package com.odfsoft.binary_gap;
+package com.odfsoft.excercises.binary_gap;
 
 public class BinaryGap {
 

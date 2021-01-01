@@ -1,4 +1,4 @@
-package com.odfsoft.longest_consecutive;
+package com.odfsoft.companies.x.longest_consecutive;
 
 public class Excercise {
 

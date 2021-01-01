@@ -1,4 +1,4 @@
-package com.odfsoft.longest_consecutive;
+package com.odfsoft.companies.x.longest_consecutive;
 
 import org.junit.jupiter.api.Test;
 

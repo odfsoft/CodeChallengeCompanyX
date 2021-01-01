@@ -1,4 +1,4 @@
-package com.odfsoft.burgers;
+package com.odfsoft.companies.x.burgers;
 
 public class Excercise {
 

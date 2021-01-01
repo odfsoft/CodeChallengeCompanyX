@@ -1,4 +1,4 @@
-package com.odfsoft.rectangles_strip;
+package com.odfsoft.challenges.y2020.rectangles_strip_silver;
 
 import java.util.HashMap;
 import java.util.Map;

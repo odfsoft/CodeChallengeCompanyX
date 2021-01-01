@@ -1,8 +1,6 @@
-package com.odfsoft.cover_buildings;
+package com.odfsoft.challenges.y2020.cover_buildings_palladium;
 
 import org.junit.jupiter.api.Test;
-
-import java.util.stream.IntStream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

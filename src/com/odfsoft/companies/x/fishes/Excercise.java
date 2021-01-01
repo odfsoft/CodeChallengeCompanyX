@@ -1,4 +1,4 @@
-package com.odfsoft.fishes;
+package com.odfsoft.companies.x.fishes;
 
 import java.util.ArrayList;
 import java.util.HashSet;

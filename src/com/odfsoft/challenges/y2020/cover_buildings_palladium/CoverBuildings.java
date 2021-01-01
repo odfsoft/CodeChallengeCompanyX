@@ -1,4 +1,4 @@
-package com.odfsoft.cover_buildings;
+package com.odfsoft.challenges.y2020.cover_buildings_palladium;
 
 public class CoverBuildings {
 

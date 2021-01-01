@@ -1,4 +1,4 @@
-package com.odfsoft.fishes;
+package com.odfsoft.companies.x.fishes;
 
 import org.junit.jupiter.api.Test;
 
