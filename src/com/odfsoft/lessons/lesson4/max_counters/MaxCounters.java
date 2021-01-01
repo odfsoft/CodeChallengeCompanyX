@@ -29,32 +29,4 @@ public class MaxCounters {
 
         return increments;
     }
-
-    public int[] solution2(int N, int[] A) {
-        int [] counters = new int[N];
-
-        int maxCounter = 0;
-        int lastResetCounter = 0;
-
-        for(int i=0; i<A.length; i++) {
-            if(A[i] <= N) {
-                if(counters[A[i]-1] < lastResetCounter) {
-                    counters[A[i]-1] = lastResetCounter;
-                }
-                counters[A[i]-1]++;
-                if(counters[A[i]-1] > maxCounter) {
-                    maxCounter = counters[A[i]-1];
-                }
-            } else {
-                lastResetCounter = maxCounter;
-            }
-        }
-        for(int i=0; i<counters.length; i++) {
-            if(counters[i] < lastResetCounter) {
-                counters[i]  = lastResetCounter;
-            }
-        }
-
-        return counters;
-    }
 }
