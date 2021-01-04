@@ -12,7 +12,7 @@ A[4] = 4
 A[5] = 0
 ```
 
-![intersection example](https://github.com/odfsoft/CodilityCodeChallenges/blob/master/com/odfsoft/lessons/lesson6/number_of_distinct_intersections/intersection.png)
+![intersection example](https://github.com/odfsoft/CodilityCodeChallenges/blob/main/src/com/odfsoft/lessons/lesson6/number_of_distinct_intersections/intersect.png)
 
 There are eleven (unordered) pairs of discs that intersect, namely:
 
