@@ -36,4 +36,14 @@ class ExcerciseTest {
         assertEquals(5, sol[1]);
     }
 
+    @Test
+    public void test4() {
+        Excercise test = new Excercise();
+
+        int[] sol = test.solution(1, 1);
+
+        assertEquals(-1, sol[0]);
+        assertEquals(-1, sol[1]);
+    }
+
 }

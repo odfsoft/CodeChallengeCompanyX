@@ -66,6 +66,15 @@ class ExcerciseTest {
     }
 
     @Test
+    public void test7() {
+        Excercise test = new Excercise();
+
+        int sol = test.solution("CDDDDDDDDD");
+
+        assertEquals(1, sol);
+    }
+
+    @Test
     public void longString() {
         Excercise test = new Excercise();
         InputStream inputStream = ExcerciseTest.class.getResourceAsStream("data.txt");

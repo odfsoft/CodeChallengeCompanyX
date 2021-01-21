@@ -3,6 +3,7 @@ package com.odfsoft.companies.x.fishes;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class Excercise {
 
@@ -14,46 +15,48 @@ public class Excercise {
     // CCAAA -> AAA = 3
     public int solution(String S) {
         char[] fishes = S.toCharArray();
-        char[] eatableFishes = new char[] {'D', 'C', 'B'};
+        char[] eatableSpecies = new char[] {'D', 'C', 'B'};
         List<Character> survivors = new ArrayList<>();
         for(Character ch: fishes) {
             survivors.add(ch);
         }
 
-        for(char eatableFish: eatableFishes) {
-            survivors = eatAllFishes(survivors, eatableFish);
+        for(char eatableFish: eatableSpecies) {
+            survivors = eatAllOfSpecies(survivors, eatableFish);
         }
 
         return survivors.size();
     }
 
-    private List<Character> eatAllFishes(List<Character> survivors, Character eatableFish) {
+    private List<Character> eatAllOfSpecies(List<Character> survivors, Character eatableSpecies) {
         int prev = -1;
         int next = 1;
         int current = 0;
-        HashSet<Integer> eatenFishes = new HashSet<>();
+        Set<Integer> eatenFishes = new HashSet<>();
         while(current < survivors.size()) {
             Character targetFish = survivors.get(current);
-            if(eatableFish.compareTo(targetFish) == 0) {
+            // we care about the eatableSpecies only.
+            if(eatableSpecies.compareTo(targetFish) == 0) {
+                // can the prev eat the target
                 if(prev != -1 && eats(survivors.get(prev), targetFish)) {
                     eatenFishes.add(current);
                     current = next;
                     next++;
-                } else {
-                    if(next < survivors.size() && eats(survivors.get(next), targetFish)) {
-                        eatenFishes.add(current);
-                        if(prev != -1) {
-                            current = prev;
-                            prev--;
-                        } else {
-                            current = next;
-                            next++;
-                        }
+                } else if(next < survivors.size() && eats(survivors.get(next), targetFish)) {
+                    // can the next eat the target
+                    eatenFishes.add(current);
+                    // we cant eat more to the left
+                    if(prev != -1) {
+                        current = prev;
+                        prev--;
                     } else {
-                        prev = current;
                         current = next;
                         next++;
                     }
+                } else {
+                    prev = current;
+                    current = next;
+                    next++;
                 }
             } else {
                 prev = current;

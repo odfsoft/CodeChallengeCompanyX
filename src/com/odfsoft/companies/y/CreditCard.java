@@ -24,15 +24,13 @@ class CreditCard {
     }
 
     private static String maskString(String creditCardNumber) {
-        if (creditCardNumber.length() < MIN_MASKING_LENGTH) {
+        if (creditCardNumber.length() < 6) {
             return creditCardNumber;
         } else {
             char[] numberCharArray = creditCardNumber.toCharArray();
-            for (int i = MASK_WINDOW_IGNORE_STARTING_CHARACTERS_COUNT;
-                 i < creditCardNumber.length() - MASK_WINDOW_IGNORE_ENDING_CHARACTERS_COUNT;
-                 i++) {
+            for (int i = 1; i < creditCardNumber.length() - 4; i++) {
                 if (Character.isDigit(numberCharArray[i])) {
-                    numberCharArray[i] = MASKING_CHARACTER;
+                    numberCharArray[i] = '#';
                 }
             }
             return new String(numberCharArray);

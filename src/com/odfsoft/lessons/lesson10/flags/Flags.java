@@ -9,18 +9,18 @@ public class Flags {
     // The other solutions use more a mathematical approach which a bit harder to reason about.
     //
     public int solution(int[] A) {
-        List<Integer> peekList = new ArrayList<>();
+        List<Integer> peakList = new ArrayList<>();
 
         for (int i=1; i<A.length-1; i++) {
             if (A[i] > A[i-1] && A[i] > A[i+1]) {
-                peekList.add(i);
+                peakList.add(i);
                 i++;
             }
         }
 
         int maxFlagCount = 0;
         int start = 0;
-        int end = peekList.size();
+        int end = peakList.size();
 
         if (end < 2) {
             return end;
@@ -30,16 +30,21 @@ public class Flags {
             // perform binary search on the existing peaks
             int flags = (start + end) / 2;
             int count = 1;
-            int prevIndex = peekList.get(0);
-
+            int prevIndex = peakList.get(0);
+            System.out.println("----- " + flags);
             // Validate if we can take this number of flags
-            for (int j=1; j<peekList.size() && count<flags; j++) {
+            for (int j=1; j<peakList.size() && count<flags; j++) {
                 // validate flag distance
-                if (peekList.get(j) - prevIndex >= flags) {
+                int distance = peakList.get(j) - prevIndex;
+                System.out.print(distance + " ");
+                if (distance >= flags) {
                     count++;
-                    prevIndex = peekList.get(j);
+                    prevIndex = peakList.get(j);
                 }
             }
+
+            System.out.println();
+            System.out.println("----- " + count);
 
             // if we can take this number of flags we move to the right side
             if (count == flags) {
